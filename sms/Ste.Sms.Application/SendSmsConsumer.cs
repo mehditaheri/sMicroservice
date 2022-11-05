@@ -15,10 +15,12 @@ public class SendSmsConsumer : IConsumer<SendSms>
 
     public async Task Consume(ConsumeContext<SendSms> context)
     {
+        var userifo = context.Headers.Get<string>("userInfo");
+
         var validationResult = await _validator.ValidateAsync(context.Message);
         if (!validationResult.IsValid)
             await context.RespondAsync(new BadRequest(validationResult));
-        await context.RespondAsync(new SendSmsResult { Success = true, StatusCode = "200" });
+        await context.RespondAsync(new Result { Success = true, StatusCode = "200",Message = context.Message.Message});
     }
 }
 

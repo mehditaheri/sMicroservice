@@ -1,6 +1,4 @@
-﻿using Ste.Framework;
-
-namespace Ste.Sms.Contract;
+﻿namespace Ste.Sms.Contract;
 
 public class SendSms
 {
@@ -13,5 +11,3 @@ public class SendSms
     public bool Status { get; set; }
     public byte Priority { get; set; }
 }
-
-public class SendSmsResult:Result{}

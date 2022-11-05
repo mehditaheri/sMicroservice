@@ -8,14 +8,19 @@ var builder = WebApplication.CreateBuilder(args);
 
 //----------- Start Config
 builder.Services.AddTransient<AbstractValidator<SendSms>, SendSmsValidator>();
-builder.Services.AddMediator(x =>
-{
-    x.AddConsumersFromNamespaceContaining<SendSmsConsumer>();
-    x.AddRequestClient<SendSmsResult>();
-});
+
 var rabbitMqSettings = builder.Configuration.GetSection(nameof(RabbitMqSettings)).Get<RabbitMqSettings>();
 builder.Services.AddMassTransit(x =>
 {
+    x.AddConsumer<SendSmsConsumer>().Endpoint(e =>
+    {
+        e.Name = "sms-send";
+        e.Temporary = false;
+        //e.ConcurrentMessageLimit = 8;
+        //e.PrefetchCount = 16;
+        //e.InstanceId = "something-unique";
+    }); ;
+    x.AddRequestClient<SendSms>();
     x.UsingRabbitMq((context, cfg) =>
     {
         cfg.Host(rabbitMqSettings.Uri, "/", h => {

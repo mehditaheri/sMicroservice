@@ -61,7 +61,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ste.Sms.Infrastructure", "S
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ste.Sms.Application", "Sms\Ste.Sms.Application\Ste.Sms.Application.csproj", "{FA276A34-3337-4B01-BC97-BC8DD7F84B6B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ste.Sms.Contract", "sms\Ste.Sms.Contract\Ste.Sms.Contract.csproj", "{2CB364AA-1A98-44BA-AFC8-B07E0889AFCB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ste.Sms.Contract", "sms\Ste.Sms.Contract\Ste.Sms.Contract.csproj", "{2CB364AA-1A98-44BA-AFC8-B07E0889AFCB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ste.Sms.Host.Test", "sms\Ste.Sms.Host.Test\Ste.Sms.Host.Test.csproj", "{3A553D9E-CA5A-4DFB-8A00-053FA39781B0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -141,6 +143,10 @@ Global
 		{2CB364AA-1A98-44BA-AFC8-B07E0889AFCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2CB364AA-1A98-44BA-AFC8-B07E0889AFCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2CB364AA-1A98-44BA-AFC8-B07E0889AFCB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A553D9E-CA5A-4DFB-8A00-053FA39781B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A553D9E-CA5A-4DFB-8A00-053FA39781B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A553D9E-CA5A-4DFB-8A00-053FA39781B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A553D9E-CA5A-4DFB-8A00-053FA39781B0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -164,6 +170,7 @@ Global
 		{CCF207B1-EDAB-4C81-8DC6-284B52EBA2AA} = {98EA6656-CE5E-48F5-9FE6-311D89C31880}
 		{FA276A34-3337-4B01-BC97-BC8DD7F84B6B} = {98EA6656-CE5E-48F5-9FE6-311D89C31880}
 		{2CB364AA-1A98-44BA-AFC8-B07E0889AFCB} = {98EA6656-CE5E-48F5-9FE6-311D89C31880}
+		{3A553D9E-CA5A-4DFB-8A00-053FA39781B0} = {98EA6656-CE5E-48F5-9FE6-311D89C31880}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4CF76758-C57E-4C24-90F1-543B56EF7919}

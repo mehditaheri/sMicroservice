@@ -6,8 +6,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\..\common\Ste.Framework\Ste.Framework.csproj" />
-  </ItemGroup>
-
 </Project>
